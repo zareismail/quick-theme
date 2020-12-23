@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-navigation">
+  <div class="dashboard-navigation" :class="{'main': isMainDashboard}">
     <div class="flex justify-arround">
       <router-link 
         class="card p-3 rounded-full mr-1 text-black no-underline dim"
@@ -16,7 +16,7 @@
       >{{ __(dashboard.label) }}</router-link > 
     </div> 
  
-    <cards v-if="cards.length > 0" :cards="cards" class="mt-6 felx" size="large"/> 
+    <cards v-if="isMainDashboard && cards.length > 0" :cards="cards" class="mt-6 felx" size="large"/> 
 
     <navigation v-if="isMainDashboard" class="card mt-8"/>
   </div>
@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style>
-.dashboard-navigation {
+.dashboard-navigation.main {
   padding: 0 10rem;
 }
 .dashboard-navigation a.card.router-link-active{
