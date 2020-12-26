@@ -13,7 +13,8 @@
           :key="index"
           :to="{
             name: navigation.name,
-            params: navigation.params
+            params: navigation.params,
+            query: navigation.query,
           }"
         >{{ __(navigation.label) }}</router-link>  
       </div>

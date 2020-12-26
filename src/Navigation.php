@@ -74,4 +74,15 @@ abstract class Navigation
         return [
         ];
     }
+
+    /**
+     * Get the routers.
+     *
+     * @return string
+     */
+    public static function query(): array
+    {
+        return [
+        ];
+    }
 }

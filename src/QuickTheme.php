@@ -120,6 +120,7 @@ class QuickTheme extends Tool
                 'label' => $navigation::label(),
                 'group' => $navigation::group(),
                 'params'=> $navigation::params(),
+                'query' => $navigation::query(),
             ];
         });
     } 
