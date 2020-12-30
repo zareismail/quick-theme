@@ -79,4 +79,8 @@ export default {
 .dashboard-navigation + h1 {
   display: none
 }
+
+.dashboard-navigation ~ div {
+  padding: 0 10rem;
+}
 </style>
