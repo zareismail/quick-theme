@@ -80,7 +80,7 @@ export default {
   display: none
 }
 
-.dashboard-navigation ~ div {
+.dashboard-navigation.main ~ div {
   padding: 0 10rem;
 }
 </style>
