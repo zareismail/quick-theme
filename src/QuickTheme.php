@@ -25,7 +25,9 @@ class QuickTheme extends Tool
     public function boot()
     { 
         Nova::provideToScript([ 
-            'quick_theme' => [$this, 'providedToScript'],
+            'quick_theme' => function($request) {
+                return $this->providedToScript($request);
+            },
         ]);
 
         Nova::script('quick-theme', __DIR__.'/../dist/js/tool.js');
@@ -121,6 +123,7 @@ class QuickTheme extends Tool
                 'group' => $navigation::group(),
                 'params'=> $navigation::params(),
                 'query' => $navigation::query(),
+                'fields'=> $navigation::fields(),
             ];
         });
     } 

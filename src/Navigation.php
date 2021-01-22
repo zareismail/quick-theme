@@ -84,5 +84,16 @@ abstract class Navigation
     {
         return [
         ];
+    }  
+
+    /**
+     * Get fields display instead of router link.
+     *
+     * @return string
+     */
+    public static function fields(): array
+    {
+        return [
+        ];
     }
 }
