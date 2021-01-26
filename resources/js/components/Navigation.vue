@@ -1,7 +1,7 @@
 <template> 
   <div class="flex flex-wrap py-3 w-full navigator" v-if="Object.keys(groupedNavigations).length">
     <div 
-      class="flex flex-wrap w-1/3 p-4 border-40 border-r"
+      class="flex w-1/3 p-4 border-40 border-r"
       v-for="(navigations, group) in groupedNavigations"
       :key="group"
     >

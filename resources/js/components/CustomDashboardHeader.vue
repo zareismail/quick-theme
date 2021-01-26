@@ -1,8 +1,8 @@
 <template>
   <div class="dashboard-navigation" :class="{'main': isMainDashboard}">
-    <div class="flex justify-arround">
+    <div class="flex flex-wrap justify-arround">
       <router-link 
-        class="card p-3 rounded-full mr-1 text-black no-underline dim"
+        class="card p-3 rounded-full mr-1 text-black no-underline dim mt-1"
         v-for="dashboard in dashboards"
         :key="dashboard.key"
         :to='{
@@ -69,8 +69,14 @@ export default {
 </script>
 
 <style>
-.dashboard-navigation.main {
-  padding: 0 10rem;
+@media only screen and (min-width: 900px) { 
+  .dashboard-navigation.main {
+    padding: 0 10rem;
+  }
+
+  .dashboard-navigation.main ~ div {
+    padding: 0 10rem;
+  }
 }
 .dashboard-navigation a.card.router-link-active{
   background: var(--success-light); 
@@ -78,9 +84,5 @@ export default {
 
 .dashboard-navigation + h1 {
   display: none
-}
-
-.dashboard-navigation.main ~ div {
-  padding: 0 10rem;
 }
 </style>
